@@ -35,4 +35,40 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
+}
+
+.futbol .fixetures .grouper {
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #bebebe;
+  text-align: center;
+}
+.futbol .fixetures .fixture {
+  padding: 0;
+}
+.futbol .fixetures .fixture hr {
+  padding: 0;
+  margin: 0;
+}
+.futbol .fixetures .fixture .match-info {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.futbol .fixetures .fixture .match-info .date {
+  background-color: #f05;
+  color: white;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.futbol .fixetures .fixture .match-info .team1 {
+  text-align: right;
 }/*# sourceMappingURL=navbear.css.map */

@@ -5,3 +5,4 @@ client/migrations
 football/migrations
 teams/migrations
 dashboard/migrations
+debug.log
