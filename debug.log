@@ -1,0 +1,149 @@
+Watching for file changes with StatReloader
+E:\django\Games\games\games\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+Not Found: /favicon.ico
+E:\django\Games\games\dashboard\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\accounts\models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/dashboard/
+E:\django\Games\games\games\urls.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\games\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+E:\django\Games\games\dashboard\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+E:\django\Games\games\dashboard\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/dashboard/
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "E:\django\Games\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\games\dashboard\views.py", line 11, in dashboard
+    return render(request, "dashboard/dashboard.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\base.py", line 169, in render
+    with context.bind_template(self):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'client'
+E:\django\Games\games\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\dashboard\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\django\Games\games\dashboard\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /dashboard/
+Traceback (most recent call last):
+  File "E:\django\Games\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\games\dashboard\views.py", line 11, in dashboard
+    return render(request, "dashboard/dashboard.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\base.py", line 169, in render
+    with context.bind_template(self):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\context.py", line 256, in bind_template
+    processors = template.engine.template_context_processors + self._processors
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\engine.py", line 118, in template_context_processors
+    return tuple(import_string(path) for path in context_processors)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\template\engine.py", line 118, in <genexpr>
+    return tuple(import_string(path) for path in context_processors)
+                 ^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\module_loading.py", line 30, in import_string
+    return cached_import(module_path, class_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\django\Games\venv\Lib\site-packages\django\utils\module_loading.py", line 15, in cached_import
+    module = import_module(module_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'client'
+E:\django\Games\games\games\settings.py changed, reloading.

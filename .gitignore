@@ -1,0 +1,7 @@
+games/settings.py
+accounts/migrations
+base/migrations
+client/migrations
+football/migrations
+teams/migrations
+dashboard/migrations
