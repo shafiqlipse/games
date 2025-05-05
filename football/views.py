@@ -409,73 +409,73 @@ def generate_post_group_fixtures(group):
 
 from football.models import Fixture, GroupStanding, FGroup
 
-def recalculate_group_standings():
-    standings = {}
+# def recalculate_group_standings():
+#     standings = {}
 
-    fixtures = Fixture.objects.filter(stage="Group", status="inplay")
+#     fixtures = Fixture.objects.filter(stage="Group", status="inplay")
 
-    for fixture in fixtures:
-        try:
-            group = FGroup.objects.get(competition=fixture.competition, teams=fixture.team1)
-        except FGroup.DoesNotExist:
-            continue  # Skip fixtures where group can't be determined
+#     for fixture in fixtures:
+#         try:
+#             group = FGroup.objects.get(competition=fixture.competition, teams=fixture.team1)
+#         except FGroup.DoesNotExist:
+#             continue  # Skip fixtures where group can't be determined
 
-        for team in [fixture.team1, fixture.team2]:
-            key = (team.id, group.id)
-            if key not in standings:
-                standings[key] = {
-                    'team': team,
-                    'group': group,
-                    'played': 0,
-                    'won': 0,
-                    'drawn': 0,
-                    'lost': 0,
-                    'goals_for': 0,
-                    'goals_against': 0,
-                    'points': 0,
-                }
+#         for team in [fixture.team1, fixture.team2]:
+#             key = (team.id, group.id)
+#             if key not in standings:
+#                 standings[key] = {
+#                     'team': team,
+#                     'group': group,
+#                     'played': 0,
+#                     'won': 0,
+#                     'drawn': 0,
+#                     'lost': 0,
+#                     'goals_for': 0,
+#                     'goals_against': 0,
+#                     'points': 0,
+#                 }
 
-        team1_data = standings[(fixture.team1.id, group.id)]
-        team2_data = standings[(fixture.team2.id, group.id)]
+#         team1_data = standings[(fixture.team1.id, group.id)]
+#         team2_data = standings[(fixture.team2.id, group.id)]
 
-        team1_data['played'] += 1
-        team2_data['played'] += 1
+#         team1_data['played'] += 1
+#         team2_data['played'] += 1
 
-        team1_data['goals_for'] += fixture.team1_score
-        team1_data['goals_against'] += fixture.team2_score
+#         team1_data['goals_for'] += fixture.team1_score
+#         team1_data['goals_against'] += fixture.team2_score
 
-        team2_data['goals_for'] += fixture.team2_score
-        team2_data['goals_against'] += fixture.team1_score
+#         team2_data['goals_for'] += fixture.team2_score
+#         team2_data['goals_against'] += fixture.team1_score
 
-        if fixture.team1_score > fixture.team2_score:
-            team1_data['won'] += 1
-            team2_data['lost'] += 1
-            team1_data['points'] += 3
-        elif fixture.team1_score < fixture.team2_score:
-            team2_data['won'] += 1
-            team1_data['lost'] += 1
-            team2_data['points'] += 3
-        else:
-            team1_data['drawn'] += 1
-            team2_data['drawn'] += 1
-            team1_data['points'] += 1
-            team2_data['points'] += 1
+#         if fixture.team1_score > fixture.team2_score:
+#             team1_data['won'] += 1
+#             team2_data['lost'] += 1
+#             team1_data['points'] += 3
+#         elif fixture.team1_score < fixture.team2_score:
+#             team2_data['won'] += 1
+#             team1_data['lost'] += 1
+#             team2_data['points'] += 3
+#         else:
+#             team1_data['drawn'] += 1
+#             team2_data['drawn'] += 1
+#             team1_data['points'] += 1
+#             team2_data['points'] += 1
 
-    # Clear existing standings
-    GroupStanding.objects.all().delete()
+#     # Clear existing standings
+#     GroupStanding.objects.all().delete()
 
-    # Save new standings
-    for data in standings.values():
-        GroupStanding.objects.create(
-            team=data['team'],
-            group=data['group'],
-            played=data['played'],
-            won=data['won'],
-            drawn=data['drawn'],
-            lost=data['lost'],
-            goals_for=data['goals_for'],
-            goals_against=data['goals_against'],
-            points=data['points'],
-        )
+#     # Save new standings
+#     for data in standings.values():
+#         GroupStanding.objects.create(
+#             team=data['team'],
+#             group=data['group'],
+#             played=data['played'],
+#             won=data['won'],
+#             drawn=data['drawn'],
+#             lost=data['lost'],
+#             goals_for=data['goals_for'],
+#             goals_against=data['goals_against'],
+#             points=data['points'],
+#         )
 
-    print("✅ Standings updated based on fixture scores.")
+#     print("✅ Standings updated based on fixture scores.")
