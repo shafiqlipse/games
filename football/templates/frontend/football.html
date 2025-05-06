@@ -217,7 +217,7 @@
                   <tbody>
                     {% for team, stats in standings %}
                     <tr>
-                      <td>{{ team.school.name|slice:":6" }}</td>
+                      <td>{{ team.school.name|slice:":10" }}</td>
                       <td>{{ stats.played }}</td>
                       <td>{{ stats.won }}</td>
                       <td>{{ stats.drawn }}</td>
