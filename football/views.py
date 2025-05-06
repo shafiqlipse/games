@@ -291,7 +291,7 @@ def standings_view(request, id):
     return render(request, "server/standings.html", context)
 
 def footfixtures(request):
-    futfixures = Fixture.objects.all()
+    futfixures = Fixture.objects.filter(status="Pending").order_by("-date")
     context = {"futfixures": futfixures}
     return render(request, "frontend/footfixtures.html", context)
 

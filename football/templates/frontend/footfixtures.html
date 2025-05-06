@@ -26,7 +26,7 @@
       {% include "base/left.html" %}
     </div>
     <div class="lo">
-      <div class="official-list">
+      <div class="table-responsive">
         <table id="myTable" class="display">
           <thead>
             <tr>
@@ -35,9 +35,10 @@
               <th>Away</th>
               <th>Time</th>
               <th>Date</th>
-
               <th>Edit</th>
+              {% comment %}
               <th>Manage</th>
+              {% endcomment %}
             </tr>
           </thead>
           <tbody>
@@ -52,10 +53,12 @@
 
               <td>
                 <a href="{% url 'update_fixture' fixture.id%}">Edit</a>
+                {% comment %}
               </td>
               <td>
                 <a href="{% url 'fixture' fixture.id%}">Manage</a>
               </td>
+              {% endcomment %}
             </tr>
 
             {% endfor %}
