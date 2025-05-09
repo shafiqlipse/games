@@ -76,9 +76,9 @@ def Furtbol(request, id):
     stage="Knockout"
     ).order_by('round', 'date', 'time')
 
-    results = Fixture.objects.filter(status="InPlay", competition=competition).order_by(
-        "date"
-    )
+    results = Fixture.objects.filter(competition=competition).order_by(
+        "-date"
+    ).exclude(status="Pending")
     rankings = get_rankings(competition)
 
     standings_data = {}

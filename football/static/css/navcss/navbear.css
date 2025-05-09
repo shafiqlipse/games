@@ -61,13 +61,36 @@
   text-transform: uppercase;
   font-weight: 500;
 }
-.futbol .fixetures .fixture .match-info .date {
+.futbol .fixetures .fixture .match-info .dqate {
+  position: relative;
+}
+.futbol .fixetures .fixture .match-info .dqate .date {
   background-color: #f05;
   color: white;
   text-align: center;
   padding: 4px 8px;
   border-radius: 5px;
   font-weight: bold;
+}
+.futbol .fixetures .fixture .match-info .dqate .hover {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  text-align: center;
+}
+.futbol .fixetures .fixture .match-info .dqate .hover .live {
+  color: #fff;
+  background-color: green;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 5px;
+}
+.futbol .fixetures .fixture .match-info .dqate .hover .ft {
+  color: #fff;
+  background-color: rgb(255, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 5px;
 }
 .futbol .fixetures .fixture .match-info .team1 {
   text-align: right;
