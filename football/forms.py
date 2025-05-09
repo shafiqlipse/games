@@ -84,15 +84,15 @@ class FixtureForm(forms.ModelForm):
             "team2_score",
         ]
         widgets = {
-            "group": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
+            "group": forms.Select(attrs={"class": "form-control"}),
             "status": forms.Select(attrs={"class": "form-control"}),
-            "round": forms.TextInput(attrs={"class": "form-control",'disabled': 'disabled'}),
+            "round": forms.TextInput(attrs={"class": "form-control"}),
             "venue": forms.TextInput(attrs={"class": "form-control"}),
-            "stage": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
+            "stage": forms.Select(attrs={"class": "form-control"}),
             "date": forms.DateInput(attrs={"class": "form-control"}),
             "time": forms.TimeInput(attrs={"class": "form-control"}),
-            "team1": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
-            "team2": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
+            "team1": forms.Select(attrs={"class": "form-control"}),
+            "team2": forms.Select(attrs={"class": "form-control"}),
             "team1_score": forms.NumberInput(attrs={"class": "form-control"}),
             "team2_score": forms.NumberInput(attrs={"class": "form-control"}),
             
