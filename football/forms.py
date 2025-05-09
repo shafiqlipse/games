@@ -85,7 +85,7 @@ class FixtureForm(forms.ModelForm):
         ]
         widgets = {
             "group": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
-            "status": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
+            "status": forms.Select(attrs={"class": "form-control"}),
             "round": forms.TextInput(attrs={"class": "form-control",'disabled': 'disabled'}),
             "venue": forms.TextInput(attrs={"class": "form-control"}),
             "stage": forms.Select(attrs={"class": "form-control",'disabled': 'disabled'}),
