@@ -131,16 +131,15 @@
                   <p class="date">
                     {{ fixture.team1_score }}
                     <!---->
-                    {% if team1_penalty_score %} ({{ fixture.team1_penalty_score }}){% endif %}
+                    {% if fixture.team1_penalty_score %} ({{ fixture.team1_penalty_score }}){% endif %}
                     <!---->
-                  
-                    <!---->
+               
                    <span> - </span>
                    <!---->
                    {{fixture.team2_score }}
                    <!---->
-                   <!---->
-                   {% if team2_penalty_score %}({{fixture.team2_penalty_score }}){% endif %}
+              
+                   {% if fixture.team2_penalty_score %}({{fixture.team2_penalty_score }}){% endif %}
                   </p>
                   <div class="hover">
                   {% if fixture.status == "InPlay" %}
