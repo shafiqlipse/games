@@ -74,6 +74,10 @@ from .models import Fixture, GroupStanding
 
 @receiver(pre_save, sender=Fixture)
 def update_standings_on_fixture_change(sender, instance, **kwargs):
+    # Exit early if not a Group stage fixture
+    if instance.stage != "Group":
+        return
+
     try:
         previous = Fixture.objects.get(pk=instance.pk)
     except Fixture.DoesNotExist:
@@ -85,7 +89,6 @@ def update_standings_on_fixture_change(sender, instance, **kwargs):
 
     # CASE 1: Status changed from Pending to InPlay — simulate 0-0 match
     if previous and previous.status == "Pending" and instance.status == "InPlay":
-        # Ensure old placeholder points don't stack
         if previous.team1_score is not None and previous.team2_score is not None:
             _reverse_standing(previous)
 
@@ -93,8 +96,7 @@ def update_standings_on_fixture_change(sender, instance, **kwargs):
         instance.team2_score = 0
         _apply_standing(instance)
 
-
-    # CASE 2: Score updated — adjust standings accordingly
+    # CASE 2: Score updated — adjust standings
     elif previous and instance.status == "InPlay":
         score_changed = (
             previous.team1_score != instance.team1_score or
@@ -102,9 +104,7 @@ def update_standings_on_fixture_change(sender, instance, **kwargs):
         )
 
         if score_changed and instance.team1_score is not None and instance.team2_score is not None:
-            # Reverse previous effect
             _reverse_standing(previous)
-            # Apply new result
             _apply_standing(instance)
 
     # CASE 3: Fresh fixture entry with InPlay status
@@ -116,7 +116,6 @@ def update_standings_on_fixture_change(sender, instance, **kwargs):
 
     # Update standings position
     _update_group_positions(group)
-
 
 def _apply_standing(fixture):
     group = fixture.group

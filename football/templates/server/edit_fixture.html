@@ -22,7 +22,7 @@
     </div>
     <div class="field flex">
       <label>{{form.group.label}}</label>
-      <span>{{form.group}}</span>
+      {% if fixture.stage != "Knockout" %} {{ form.group }} {% endif %}
     </div>
     <div class="field flex">
       <label>{{form.venue.label}}</label>
