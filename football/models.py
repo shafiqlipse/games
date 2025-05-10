@@ -75,6 +75,10 @@ class Fixture(models.Model):
     )
     team1_score = models.IntegerField(null=True, blank=True)
     team2_score = models.IntegerField(null=True, blank=True)
+    
+        # Optional penalty scores (used only when match is drawn and resolved via penalties)
+    team1_penalty_score = models.IntegerField(null=True, blank=True)
+    team2_penalty_score = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"Match {self.id}: {self.team1} vs {self.team2}"

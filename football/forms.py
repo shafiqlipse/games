@@ -82,6 +82,8 @@ class FixtureForm(forms.ModelForm):
             "team2",
             "team1_score",
             "team2_score",
+            "team1_penalty_score",
+            "team2_penalty_score",
         ]
         widgets = {
             "group": forms.Select(attrs={"class": "form-control"}),
@@ -95,6 +97,8 @@ class FixtureForm(forms.ModelForm):
             "team2": forms.Select(attrs={"class": "form-control"}),
             "team1_score": forms.NumberInput(attrs={"class": "form-control"}),
             "team2_score": forms.NumberInput(attrs={"class": "form-control"}),
+            "team1_penalty_score": forms.NumberInput(attrs={"class": "form-control"}),
+            "team2_penalty_score": forms.NumberInput(attrs={"class": "form-control"}),
             
             }
 
